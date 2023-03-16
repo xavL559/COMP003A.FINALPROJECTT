@@ -5,6 +5,8 @@
   * 
  */
 
+using Microsoft.VisualBasic;
+
 namespace _003A.FInalProject
 {
     internal class Program
@@ -26,11 +28,22 @@ namespace _003A.FInalProject
             lastName = Console.ReadLine();
 
             //userinput age
-            string ageInput;
-            Console.Write("Enter Birth Year: ");
-            ageInput = Console.ReadLine();
-            int userAge = Convert.ToInt32(ageInput);
-            int inputAge = Ageuser(userAge);
+            bool isValid = false;
+            int year;
+            do
+            {
+                Console.WriteLine("Enter Birth Year: ");
+
+
+                if (year <= 1900 || year >= 2030) ;
+                {
+                    Console.WriteLine("Invalid Input");
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }while(isValid);
 
             ///userinput gender
             string genderUser;
@@ -105,15 +118,10 @@ namespace _003A.FInalProject
             /// </summary>
             /// <param name="year"></param>
             /// <returns></returns>
-            static int Ageuser(int year)
-            {
 
-                do
-                {
-                    Console.Write("Enter Birth Year: ");
-                } while (year >= 2023 || year < 1900);
-                return 2023 - year;
-            }
+            
+
+            
 
             /// <summary>
             /// Getting the user input gender by using a if else loop based if the user enters M, F, or O
