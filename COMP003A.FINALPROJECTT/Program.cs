@@ -36,12 +36,12 @@ namespace _003A.FInalProject
             
 
             ///userinput gender
-            string genderUser;
+            string genderUser;///assinging user input to a variable 
                 Console.WriteLine("Please Enter Gender: (M, F, O)");
                 genderUser = Console.ReadLine();
                 char genderInput = Convert.ToChar(genderUser);
 
-                var questions = new List<string>();
+                var questions = new List<string>(); ///creating list of questions
 
                 questions.Add($"Question 1: Do you take meds");
 
@@ -63,9 +63,9 @@ namespace _003A.FInalProject
 
                 questions.Add("Question 10: Has blood ever come out while you were peeing?");
 
-                var responses = new List<string>();
+                var responses = new List<string>(); ///list of responses
 
-            foreach (var question in questions)
+            foreach (var question in questions) ///assiging the responses to the questions
             {
                 Console.WriteLine(question);
                 
@@ -77,9 +77,9 @@ namespace _003A.FInalProject
             Console.Write("SUMMARY");
             Console.Write("\n");//breaking the line
             Username(lastName, firstName);//displaying the user input last name and first name
-            Console.WriteLine(ageOutput);
-            Genderinput(genderInput);
-            for (int i = 0; i < questions.Count; i++)
+            Console.WriteLine(ageOutput); ///age output
+            Genderinput(genderInput);//calling the gender user input
+            for (int i = 0; i < questions.Count; i++) ///calling the questions/ response using a for statement
             {
                 Console.WriteLine(questions[i]);
                 Console.WriteLine(responses[i]);
